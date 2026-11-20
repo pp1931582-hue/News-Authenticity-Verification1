@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NewsGuard AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>NewsGuard AI</h1>
+        <p>AI-Powered News Authenticity Verification</p>
+    </header>
+
+    <main class="container">
+
+        <!-- NEWS INPUT -->
+        <section class="input-card">
+
+            <h2>Verify a News Article</h2>
+
+            <p>
+                Paste a news article below to analyze its authenticity.
+            </p>
+
+            <textarea id="newsText" placeholder="Paste your news article here..." rows="8"></textarea>
+
+            <button type="button" id="verifyBtn" onclick="verifyNews()">
+                Verify News
+            </button>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Analyzed</h3>
+                <p id="totalCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Fake News</h3>
+                <p id="fakeCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Real News</h3>
+                <p id="realCount">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- ANALYSIS RESULT -->
+        <section class="result-card">
+
+            <h2>Analysis Result</h2>
+
+            <div id="result">
+                <p>Your prediction will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <!-- PREDICTION HISTORY -->
+        <section class="history-card">
+
+            <h2>Prediction History</h2>
+
+            <button type="button" id="clearHistoryBtn" onclick="clearHistory()">
+                Clear History
+            </button>
+
+            <ul id="historyList"></ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>AI prediction is not proof of authenticity.</p>
+
+        <p>NewsGuard AI | Final Year AIML Project</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
